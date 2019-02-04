@@ -1,6 +1,6 @@
 require_relative './services/movies_reviews_service'
 
-class Movie
+class MoviesApi
   def filmReviews
     MovieReviewService.new 
   end

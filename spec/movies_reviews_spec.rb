@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'rspec'
 
-describe Movie do 
+describe MoviesApi do 
 
   context 'requesting data from the movie review service works correctly' do 
     before(:all) do 
@@ -21,9 +21,9 @@ describe Movie do
       expect(@movies_reviews_service.retrieve_copyright).to be_kind_of(String)
     end
 
-    # it 'should retrieve the has more as a boolean' do 
-    #   expect(@movies_reviews_service.retrieve_copyright).to be_kind_of(String)
-    # end
+    it 'should retrieve the has more as a boolean' do 
+      expect(@movies_reviews_service.retrieve_has_more).to eq(true) | eq(false)
+    end
 
     it 'should retrieve the number results as an integer' do 
       expect(@movies_reviews_service.retrieve_num_results).to be_kind_of(Integer)
@@ -34,8 +34,8 @@ describe Movie do
     end
 
     it 'should retrieve all display title from results array as a string' do 
-      @movies_reviews_service.retrieve_all_display_title.each do |display_type| 
-        expect(display_type).to be_kind_of(String)
+      @movies_reviews_service.retrieve_all_display_title.each do |display_title| 
+        expect(display_title).to be_kind_of(String)
       end
     end
 
@@ -117,6 +117,11 @@ describe Movie do
       end
     end
 
+    it 'should include the title name in all display titles from results array as a string' do 
+      @movies_reviews_service.retrieve_all_display_title.each do |display_title| 
+        expect(display_title).to include("Pokemon")
+      end
+    end
 
   end 
 end 
