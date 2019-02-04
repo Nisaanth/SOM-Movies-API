@@ -1,9 +1,8 @@
 require 'rspec'
 require 'json'
 require 'httparty'
-require_relative '../lib/weatherapi'
 require 'dotenv'
-Dotenv.load('.env')
+require_relative '../lib/movies'
 
 RSpec.configure do |config|
   config.color = true
