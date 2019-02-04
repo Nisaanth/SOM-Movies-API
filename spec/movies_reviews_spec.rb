@@ -1,12 +1,14 @@
 require 'spec_helper'
 require 'rspec'
 
+
 describe MoviesApi do 
 
   context 'requesting data from the movie review service works correctly' do 
     before(:all) do 
+      @random_movie = RandomMoviesGenerator.new.get_movie_by_name
       @movies_reviews_service = MovieReviewService.new
-      @movies_reviews_service.movie_review_request_by_title('pokemon')
+      @movies_reviews_service.movie_review_request_by_title(@random_movie)
     end 
 
     it 'should retrieve the results in as a hash' do 
@@ -40,7 +42,7 @@ describe MoviesApi do
     end
 
     it 'should retrieve all mpaa_rating from results array as a string' do 
-      @movies_reviews_service.retrieve_all_display_title.each do |mpaa_rating| 
+      @movies_reviews_service.retrieve_all_mpaa_rating.each do |mpaa_rating| 
         expect(mpaa_rating).to be_kind_of(String)
       end
     end
@@ -117,9 +119,39 @@ describe MoviesApi do
       end
     end
 
-    it 'should include the title name in all display titles from results array as a string' do 
+    it 'should include the title name in all display titles from results array' do 
       @movies_reviews_service.retrieve_all_display_title.each do |display_title| 
         expect(display_title).to include("Pokemon")
+      end
+    end
+
+    it 'should retrieve all mpaa_rating from results array with the length of 1' do 
+      @movies_reviews_service.retrieve_all_mpaa_rating.each do |mpaa_rating| 
+        expect(mpaa_rating.length).to eq 1
+      end
+    end
+
+    it 'should retrieve all publication date from results array with a length of 10' do 
+      @movies_reviews_service.retrieve_all_publication_date.each do |publication_date|
+        expect(publication_date.length).to eq 10
+      end
+    end
+
+    it 'should retrieve all opening_date from results array with a length of 10' do 
+      @movies_reviews_service.retrieve_all_opening_date.each do |opening_date|
+        expect(opening_date.length).to eq 10
+      end
+    end
+
+    it 'should retrieve all date_updated from results array with a length of 10' do 
+      @movies_reviews_service.retrieve_all_date_updated.each do |date_updated|
+        expect(date_updated.length).to eq 19
+      end
+    end
+
+    it 'should include http:// in  all link urls from results array' do 
+      @movies_reviews_service.retrieve_all_link_url.each do |url|
+        expect(url).to include('http://')
       end
     end
 

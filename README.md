@@ -50,5 +50,5 @@ created a SOM (Service Object Model) for the NY Times API and tested the movie r
 
 ## Learning points
 1. Setting up the file structure
-2. Testing the random postcode generator using unit test
+<!-- 2. Testing the random postcode generator using unit test -->
 3. develeloped better understanding of dealing with an api unit test
