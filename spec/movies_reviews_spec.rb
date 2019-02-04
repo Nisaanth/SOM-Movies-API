@@ -1,7 +1,6 @@
 require 'spec_helper'
 require 'rspec'
 
-
 describe MoviesApi do 
 
   context 'requesting data from the movie review service works correctly' do 

@@ -2,7 +2,7 @@
 
 ## Description
 
-created a SOM (Service Object Model) for the NY Times API and tested the movie reviews api (https://developer.nytimes.com/my-apps/movies-api) service. Tested the movie title using rspec.
+Created a SOM (Service Object Model) for the NY Times API and tested the movie reviews api (https://developer.nytimes.com/my-apps/movies-api) service. Tested the movie title using rspec.
 
 ## Languages used
 * Ruby 
@@ -42,13 +42,19 @@ created a SOM (Service Object Model) for the NY Times API and tested the movie r
     ```
 6. Run the method within that moviesapi.rb superclass
 
+## How to test 
+
+2. open https://developer.nytimes.com/my-apps/movies-api and create your own API key to use
+3. Create a empty .env file and type out:
+> API_KEY= {insert_your_api_key_without_brackets}
+4. Save file (You may want to create a gitignore to avoid exposure of api keys)
 
 ## Challenges 
-1. thinking of creating different tests
-2. deciding when to stop testing 
-3. planning out loop methods on how to access elements in arrays or hash
+1. Thinking of creating different tests
+2. Deciding when to stop testing 
+3. Planning out loop methods on how to access elements in arrays or hash
 
 ## Learning points
 1. Setting up the file structure
-<!-- 2. Testing the random postcode generator using unit test -->
-3. develeloped better understanding of dealing with an api unit test
+2. Testing the random movie generator using unit test
+3. Developed better understanding of dealing with an api unit test
