@@ -44,10 +44,10 @@ Created a SOM (Service Object Model) for the NY Times API and tested the movie r
 
 ## How to test 
 
-2. open https://developer.nytimes.com/my-apps/movies-api and create your own API key to use
-3. Create a empty .env file and type out:
+1. open https://developer.nytimes.com/my-apps/movies-api and create your own API key to use
+2. Create a empty .env file and type out:
 > API_KEY= {insert_your_api_key_without_brackets}
-4. Save file (You may want to create a gitignore to avoid exposure of api keys)
+3. Save file (You may want to create a gitignore to avoid exposure of api keys)
 
 ## Challenges 
 1. Thinking of creating different tests
