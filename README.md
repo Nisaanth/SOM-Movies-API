@@ -34,13 +34,13 @@ Created a SOM (Service Object Model) for the NY Times API and tested the movie r
 ## How to Use 
 1. Create lib folder
 2. Put the code into the lib folder
-4. Instantiate the super class weatherapi.rb in your _spec.rb file
-5. Open your spec_helper.rb and require_relative with the given path of the weatherapi.rb file
+3. Instantiate the super class moviesapi.rb in your _spec.rb file
+4. Open your spec_helper.rb and require_relative with the given path of the moviesapi.rb file
     ``` ruby
     eg. require 'rspec'
     require_relative '../moviesapi'
     ```
-6. Run the method within that moviesapi.rb superclass
+5. Run the method within that moviesapi.rb superclass
 
 ## How to test 
 
