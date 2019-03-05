@@ -5,7 +5,7 @@ describe MoviesApi do
 
   context 'requesting data from the movie review service works correctly' do 
     before(:all) do 
-      p @random_movie = RandomMoviesGenerator.new.get_movie_by_name
+      @random_movie = RandomMoviesGenerator.new.get_movie_by_name
       @movies_reviews_service = MovieReviewService.new
       @movies_reviews_service.movie_review_request_by_title(@random_movie)
     end 

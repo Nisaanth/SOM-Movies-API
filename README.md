@@ -42,7 +42,7 @@ Created a SOM (Service Object Model) for the NY Times API and tested the movie r
     ```
 5. Run the method within that moviesapi.rb superclass
 
-## How to test 
+## How to get API key 
 
 1. open https://developer.nytimes.com/my-apps/movies-api and create your own API key to use
 2. Create a empty .env file and type out:
